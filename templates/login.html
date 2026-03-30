@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verto | Log in to Verto</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <a href="/login">Login</a>
-            <a href="/signup">Get Started</a>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
+{% block title %} Log In {% endblock %}
+
+{% block content %}
     <div class="login">
         <h2>Log in to your Verto Account</h2>
         <form method="POST">
@@ -28,5 +18,4 @@
         <p>Quick Links: <a href="/">Home</a> | <a href="/">About</a> | <a href="/">Contact</a></p>
         <p>&copy; 2026 Verto</p>
     </footer>
-</body>
-</html>
+{% endblock %}

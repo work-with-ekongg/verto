@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verto | Welcome</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <a href="/">Login</a>
-            <a href="/">Get Started</a>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
+{% block title %} Welcome to Verto {% endblock %}
+
+{% block content %}
     <div class="hero-big">
         <h1>Welcome to Verto</h1>
         <p>Create. Connect. Get paid</p>
-        <a href="/">Get Started</a>
+        <a href="/signup">Get Started</a>
     </div>
 
     <div class="sections">
@@ -35,5 +25,4 @@
         <p>Quick Links: <a href="/">Home</a> | <a href="/">About</a> | <a href="/">Contact</a></p>
         <p>&copy; 2026 Verto</p>
     </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+
+    <div class="dashboard">
+        <h2>Welcome, {{ username }}!</h2>
+        <p>Your role: {{ role }}</p>
+        <p>Your skill: {{ skill }}</p>
+        <p>Bio: {{ bio }}</p>
+    </div>
+
+    <footer>
+        <p>Quick Links: <a href="/">Home</a> | <a href="/">About</a> | <a href="/">Contact</a></p>
+        <p>&copy; 2026 Verto</p>
+    </footer>
+{% endblock %}

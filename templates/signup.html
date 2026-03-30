@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verto | Sign Up</title>
-</head>
-<body>
-    <nav>
-        <div>
-            <a href="/login">Login</a>
-            <a href="/signup">Get Started</a>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
     <div class="signup">
         <h2>Create a Verto Account</h2>
-        <form method="POST">
+        <form method="POST", enctype="multipart/form-data">
             <input type="text" name="username" id="username" placeholder="Verto User" required>
             <input type="email" name="email" id="email" placeholder="someone@example.com" required>
             <input type="password" name="password" id="password" placeholder="123456" required>
-            <input type="text" name="skill" id="skill" placeholder="Your Skill (e.g. Photographer)" required>
-            <input type="text" name="bio" id="bio" placeholder="Tell us about yourself" required>
+            <input type="text" name="skill" id="skill" placeholder="Your Skill or need(e.g. Photographer or in need of a photographer)" required>
+            <textarea name="bio" id="bio" placeholder="Tell us about yourself" required></textarea>
+            <input type="file" name="profile_pic">
+            <select name="role" id="user_type" required>
+                <option value="creative">Creative</option>
+                <option value="client">Client</option>
+            </select>
             <button type="submit">Create Account</button>
         </form>
 
@@ -31,5 +26,4 @@
         <p>Quick Links: <a href="/">Home</a> | <a href="/">About</a> | <a href="/">Contact</a></p>
         <p>&copy; 2026 Verto</p>
     </footer>
-</body>
-</html>
+{% endblock %}
